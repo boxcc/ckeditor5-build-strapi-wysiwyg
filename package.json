@@ -1,6 +1,6 @@
 {
   "name": "@boxcc/ckeditor5-build-strapi-wysiwyg",
-  "version": "1.13.2",
+  "version": "1.13.3",
   "description": "CKEditor 5 build for Strapi WYSIWYG editor replacement",
   "private": false,
   "keywords": [
