@@ -50,6 +50,7 @@ import { StrapiUploadAdapter } from "@gtomato/ckeditor5-strapi-upload-plugin";
 import { StrapiMediaLib } from "./strapi-medialib-plugin";
 import sanitizeHtml from "sanitize-html";
 import FullScreen from "./fullscreen-plugin";
+import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -103,6 +104,7 @@ ClassicEditor.builtinPlugins = [
     TableProperties,
     TableCellProperties,
     SourceEditing,
+    GeneralHtmlSupport,
 ];
 
 // Editor configuration.
@@ -269,6 +271,27 @@ ClassicEditor.defaultConfig = {
                 },
             },
         ],
+    },
+    htmlSupport: {
+        allow: [
+            // Enables all HTML features.
+            {
+                name: /.*/,
+                attributes: true,
+                classes: true,
+                styles: true
+            }
+        ],
+        disallow: [
+            {
+                attributes: [
+                    { key: /^on(.*)/i, value: true },
+                    { key: /.*/, value: /(\b)(on\S+)(\s*)=|javascript:|(<\s*)(\/*)script/i },
+                    { key: /.*/, value: /data:(?!image\/(png|jpeg|gif|webp))/i }
+                ]
+            },
+            { name: 'script' }
+        ]
     },
     // This value must be kept in sync with the language defined in webpack.config.js.
     language: "en",

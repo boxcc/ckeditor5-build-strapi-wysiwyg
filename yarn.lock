@@ -197,6 +197,14 @@
   dependencies:
     ckeditor5 "^29.2.0"
 
+"@ckeditor/ckeditor5-html-support@^29.2.0":
+  version "29.2.0"
+  resolved "https://registry.npmjs.org/@ckeditor/ckeditor5-html-support/-/ckeditor5-html-support-29.2.0.tgz#9590736da0c6a6135d8aeae0882d5e31bd91ecfb"
+  integrity sha512-kPDUFLoQRUm+5YvSxswPoBaU8wl7nURGD4G8mIRVLCN7glTm2ri15OouStaMdQMqEatR8DcW/yzIcF9QfPNy/A==
+  dependencies:
+    ckeditor5 "^29.2.0"
+    lodash-es "^4.17.15"
+
 "@ckeditor/ckeditor5-image@^29.2.0":
   version "29.2.0"
   resolved "https://registry.npmjs.org/@ckeditor/ckeditor5-image/-/ckeditor5-image-29.2.0.tgz#5b07f85b5870d6607f4a5244fde69dc8f430ffe2"

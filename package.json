@@ -1,6 +1,6 @@
 {
   "name": "@boxcc/ckeditor5-build-strapi-wysiwyg",
-  "version": "1.13.3",
+  "version": "1.13.4",
   "description": "CKEditor 5 build for Strapi WYSIWYG editor replacement",
   "private": false,
   "keywords": [
@@ -43,6 +43,7 @@
     "@ckeditor/ckeditor5-heading": "^29.2.0",
     "@ckeditor/ckeditor5-horizontal-line": "^29.2.0",
     "@ckeditor/ckeditor5-html-embed": "^29.2.0",
+    "@ckeditor/ckeditor5-html-support": "^29.2.0",
     "@ckeditor/ckeditor5-image": "^29.2.0",
     "@ckeditor/ckeditor5-indent": "^29.2.0",
     "@ckeditor/ckeditor5-link": "^29.2.0",
@@ -57,9 +58,9 @@
     "@ckeditor/ckeditor5-theme-lark": "^29.2.0",
     "@ckeditor/ckeditor5-typing": "^29.2.0",
     "@gtomato/ckeditor5-strapi-upload-plugin": "^1.0.0",
+    "css-loader": "^5.2.7",
     "eslint": "^7.32.0",
     "eslint-config-ckeditor5": "^3.1.0",
-    "css-loader": "^5.2.7",
     "postcss": "^8.3.6",
     "postcss-loader": "^4.3.0",
     "raw-loader": "^4.0.2",
