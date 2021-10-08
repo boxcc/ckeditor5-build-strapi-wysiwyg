@@ -160,6 +160,7 @@ ClassicEditor.defaultConfig = {
     shouldNotGroupWhenFull: true,
   },
   image: {
+    upload: { types: ['jpeg', 'png', 'gif', 'bmp', 'webp', 'tiff', 'svg+xml'] },
     styles: ['alignLeft', 'alignCenter', 'alignRight'],
     resizeOptions: [
       {
@@ -292,19 +293,25 @@ ClassicEditor.defaultConfig = {
         classes: true,
         styles: true,
       },
+      {
+        name: 'svg',
+        attributes: true,
+        classes: true,
+        styles: true,
+      },
     ],
     disallow: [
-      {
-        attributes: [
-          { key: /^on(.*)/i, value: true },
-          {
-            key: /.*/,
-            value: /(\b)(on\S+)(\s*)=|javascript:|(<\s*)(\/*)script/i,
-          },
-          { key: /.*/, value: /data:(?!image\/(png|jpg|jpeg|gif|webp))/i },
-        ],
-      },
-      { name: 'script' },
+      // {
+      //   attributes: [
+      //     { key: /^on(.*)/i, value: true },
+      //     {
+      //       key: /.*/,
+      //       value: /(\b)(on\S+)(\s*)=|javascript:|(<\s*)(\/*)script/i,
+      //     },
+      //     { key: /.*/, value: /data:(?!image\/(png|jpg|jpeg|gif|webp))/i },
+      //   ],
+      // },
+      // { name: 'script' },
     ],
   },
   // This value must be kept in sync with the language defined in webpack.config.js.
